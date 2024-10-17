@@ -118,7 +118,7 @@ const index: React.FC<indexProps> = () => {
     <>
       <div id="menu-target" data-scroll-container ref={refScroll}>
         <Head>
-          <link rel="icon" href="svg/favicon.svg" />
+          <link rel="icon" href="png/Logo.png" />
           <link href="/" rel="canonical" />
           <meta name="theme-color" content="#10101A" />
           <meta
