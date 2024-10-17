@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Head from "next/head";
-//import { cubicBezier, motion } from "framer-motion";
+import { cubicBezier, motion } from "framer-motion";
 import { Navigation } from "../components/Navigation/Navigation";
 import useSwr from "swr";
 import ReactGa from "react-ga";
@@ -20,11 +20,11 @@ const locomotiveScroll =
 const hoverEffect =
   typeof window !== `undefined` ? require("hover-effect").default : null;
 
-//const transition: { duration: number; ease: any } = {
-  //duration: 1.4,
-  //ease: cubicBezier(0.6, 0.01, -0.05, 0.9),
+const transition: { duration: number; ease: any } = {
+  duration: 1.4,
+  ease: cubicBezier(0.6, 0.01, -0.05, 0.9),
   //ease: [0.6, 0.01, -0.05, 0.9],
-//};
+};
 
 const fetcher = (url: any) => fetch(url).then((res) => res.json());
 
@@ -136,7 +136,7 @@ const index: React.FC<indexProps> = () => {
             content="Symon Falcatan 🚀 &mdash; Frontend Devloper"
           />
           <meta property="og:url" content="https://adeolaadeoti.xyz/" />
-          <meta property="og:image" content="webp/preview-image.png" />
+          <meta property="og:image" content="webp/nextview.png" />
           <meta
             property="og:description"
             content="I'm a self-taught Front End Developer and turning ideas into real life products is my calling."
@@ -158,8 +158,36 @@ const index: React.FC<indexProps> = () => {
         </audio>
         
        
-        {/* loader */}
-
+        <motion.div
+          data-scroll
+          data-scroll-sticky
+          data-scroll-target="#menu-target"
+          animate={{ top: "-100vh", transition: { ...transition, delay: 9 } }}
+          className="preloader"
+        >
+          <div className="preloader__wrapper">
+            <motion.div
+              initial={{ x: -10, opacity: 0 }}
+              animate={{ x: 0, opacity: 1, transition: { ...transition } }}
+              className="preloader__left"
+            >
+              <img src="png/Logo.png" alt="adeola logo" />
+            </motion.div>
+            <motion.div
+              initial={{ x: 10, opacity: 0 }}
+              animate={{ x: 0, opacity: 1, transition: { ...transition } }}
+              className="preloader__right"
+            >
+              <p className="preloader__text">HTML</p>
+              <p className="preloader__text">CSS/SCSS</p>
+              <p className="preloader__text">JAVASCRIPT</p>
+              <p className="preloader__text">TYPESCRIPT</p>
+              <p className="preloader__text">REACT JS</p>
+              <p className="preloader__text">NEXT JS</p>
+              <p className="preloader__text">FRAMER MOTION</p>
+            </motion.div>
+          </div>
+        </motion.div>
 
         <Navigation
           isOpen={isToggleOpen}
