@@ -119,7 +119,7 @@ const index: React.FC<indexProps> = () => {
       <div id="menu-target" data-scroll-container ref={refScroll}>
         <Head>
           <link rel="icon" href="svg/favicon.svg" />
-          <link href="https://adeolaadeoti.xyz/" rel="canonical" />
+          <link href="/" rel="canonical" />
           <meta name="theme-color" content="#10101A" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
@@ -135,7 +135,7 @@ const index: React.FC<indexProps> = () => {
             property="og:title"
             content="Symon Falcatan 🚀 &mdash; Frontend Devloper"
           />
-          <meta property="og:url" content="https://adeolaadeoti.xyz/" />
+          <meta property="og:url" content="/" />
           <meta property="og:image" content="webp/nextview.png" />
           <meta
             property="og:description"
@@ -149,9 +149,9 @@ const index: React.FC<indexProps> = () => {
             name="twitter:description"
             content="I'm a self-taught Front End Developer and turning ideas into real life products is my calling."
           />
-          <meta name="twitter:image" content="webp/preview-image.png" />
+          <meta name="twitter:image" content="webp/nextview.png" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:url" content="https://adeolaadeoti.xyz/" />
+          <meta name="twitter:url" content="/" />
         </Head>
         <audio loop id="audioPlayer" autoPlay style={{ display: "none" }}>
           <source src="sound/preloader.mp3" type="audio/mp3" />
